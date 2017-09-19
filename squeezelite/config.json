@@ -7,10 +7,6 @@
   "image": " ",
   "startup": "after",
   "boot": "auto",
-  "options": {
-    "plugins": []
-  },
- 
   "map": ["config:rw"],
   "host_network": true
 }
