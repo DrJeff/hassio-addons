@@ -1,0 +1,16 @@
+{
+  "name": "SqueezeLite",
+  "version": "0.1",
+  "slug": "squeezelite",
+  "description": "",
+  "url": "https://github.com/DrJeff/hassio-addons/tree/master/squeezelite",
+  "image": " ",
+  "startup": "after",
+  "boot": "auto",
+  "options": {
+    "plugins": []
+  },
+ 
+  "map": ["config:rw"],
+  "host_network": true
+}
