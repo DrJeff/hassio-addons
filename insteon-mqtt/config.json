@@ -1,0 +1,23 @@
+{
+	"name": "InsteonMqtt",
+	"version": "11",
+	"slug": "insteonmqtt",
+	"description": "Insteon to MQTT",
+	"startup": "before",
+	"boot": "auto",
+	"host_network": true,
+	"arch": [
+		"aarch64",
+		"amd64",    
+		"armhf",
+		"armv7",
+		"i386"
+		],
+	"ports": {
+		"1883/tcp": 1883
+	},
+	"map": ["config:rw", "share:rw", "ssl"],
+	"options": {},
+	"devices": ["/dev/ttyUSB0:/dev/ttyUSB0:rwm"],
+	"schema": {}
+}
