@@ -1,6 +1,6 @@
 {
   "name": "amcrest2mqtt",
-  "version": "0.04",
+  "version": "0.05",
   "slug": "amcrest2mqtt",
   "description": "Amcrest Dorbell add-on!",
   "arch": [
