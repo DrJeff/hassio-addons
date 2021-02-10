@@ -11,5 +11,6 @@ FROM base
 COPY --from=builder /install /usr/local
 COPY src /app
 WORKDIR /app
+COPY run.sh /
 
 CMD [ "/run.sh" ]
