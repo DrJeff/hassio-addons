@@ -27,5 +27,6 @@
     "HOME_ASSISTANT_PREFIX": "homeassistant"
 
   },
+  "options": {},
   "schema": {}
 }
