@@ -5,7 +5,7 @@
   "description": "",
   "url": "https://github.com/DrJeff/hassio-addons/tree/master/squeezelite",
   "image": " ",
-  "startup": "after",
+  "startup": "application",
   "boot": "auto",
   "map": ["config:rw"],
   "host_network": true
