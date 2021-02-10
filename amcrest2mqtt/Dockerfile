@@ -12,4 +12,4 @@ COPY --from=builder /install /usr/local
 COPY src /app
 WORKDIR /app
 
-CMD [ "run.sh" ]
+CMD [ "/run.sh" ]
