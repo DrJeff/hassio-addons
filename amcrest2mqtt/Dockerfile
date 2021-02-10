@@ -1,5 +1,7 @@
-FROM python:3.9-alpine as base
-FROM base as builder
+ARG BUILD_FROM
+FROM $BUILD_FROM
+
+ENV LANG C.UTF-8
 
 RUN mkdir /install
 WORKDIR /install
@@ -12,5 +14,6 @@ COPY --from=builder /install /usr/local
 COPY src /app
 WORKDIR /app
 COPY run.sh /
+RUN chmod a+x /run.sh
 
 CMD [ "/run.sh" ]
