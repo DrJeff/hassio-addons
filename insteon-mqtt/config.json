@@ -3,7 +3,7 @@
 	"version": "11",
 	"slug": "insteonmqtt",
 	"description": "Insteon to MQTT",
-	"startup": "before",
+	"startup": "application",
 	"boot": "auto",
 	"host_network": true,
 	"arch": [
