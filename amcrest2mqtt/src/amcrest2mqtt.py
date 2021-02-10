@@ -7,15 +7,15 @@ import sys
 import json
 import signal
 
-amcrest_host = os.getenv('AMCREST_HOST')
+amcrest_host = os.getenv('AMCREST_HOST') or "192.168.0.232"
 amcrest_port = int(os.getenv('AMCREST_PORT') or 80)
 amcrest_username = os.getenv('AMCREST_USERNAME') or "admin"
-amcrest_password = os.getenv('AMCREST_PASSWORD')
+amcrest_password = os.getenv('AMCREST_PASSWORD') or "admin"
 
 mqtt_host = os.getenv('MQTT_HOST') or "localhost"
 mqtt_qos = int(os.getenv("MQTT_QOS") or 0)
 mqtt_port = int(os.getenv('MQTT_PORT') or 1883)
-mqtt_username = os.getenv('MQTT_USERNAME')
+mqtt_username = os.getenv('MQTT_USERNAME') or "mosquitto"
 mqtt_password = os.getenv('MQTT_PASSWORD') # can be None
 
 home_assistant = os.getenv("HOME_ASSISTANT") == "true"
