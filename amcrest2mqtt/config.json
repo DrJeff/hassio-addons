@@ -10,7 +10,8 @@
     "amd64",
     "i386"
   ],
-  "startup": "application",
+  "startup": "before",
+  "host_network": true,
   "boot": "auto",
   "options": {
     "AMCREST_HOST": "127.0.0.1",
