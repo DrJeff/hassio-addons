@@ -9,7 +9,7 @@ import signal
 
 #CONFIG_PATH=/data/options.json
 
-amcrest_host = os.getenv("AMCREST_HOST") or "192.168.0.232"
+amcrest_host = os.getenv("AMCREST_HOST")
 amcrest_port = int(os.getenv("AMCREST_PORT") or 80)
 amcrest_username = os.getenv("AMCREST_USERNAME") or "admin"
 amcrest_password = os.getenv("AMCREST_PASSWORD") or "admin"
