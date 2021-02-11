@@ -23,7 +23,7 @@ import signal
 # home_assistant = os.getenv("HOME_ASSISTANT") == "true"
 # home_assistant_prefix = os.getenv("HOME_ASSISTANT_PREFIX") or "homeassistant"
 
-amcrest_host = $(bashio::config 'AMCREST_HOST') 
+amcrest_host = "$(bashio::config 'AMCREST_HOST')" 
 amcrest_port = bashio::config 'AMCREST_PORT'
 amcrest_username = bashio::config 'AMCREST_USERNAME'
 amcrest_password = bashio::config 'AMCREST_PASSWORD'
