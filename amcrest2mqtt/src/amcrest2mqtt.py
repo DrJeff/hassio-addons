@@ -23,19 +23,19 @@ import signal
 # home_assistant = os.getenv("HOME_ASSISTANT") == "true"
 # home_assistant_prefix = os.getenv("HOME_ASSISTANT_PREFIX") or "homeassistant"
 
-amcrest_host = $(bashio::config 'AMCREST_HOST') 
-amcrest_port = $(bashio::config 'AMCREST_PORT')
-amcrest_username = $(bashio::config 'AMCREST_USERNAME')
-amcrest_password = $(bashio::config 'AMCREST_PASSWORD')
+amcrest_host = os.getenv(bashio::config 'AMCREST_HOST') 
+amcrest_port = int(os.getenv(bashio::config 'AMCREST_PORT') or 80)
+amcrest_username = os.getenv(bashio::config 'AMCREST_USERNAME')
+amcrest_password = os.getenv(bashio::config 'AMCREST_PASSWORD')
 
-mqtt_host = $(bashio::config 'MQTT_HOST')
-mqtt_qos = $(bashio::config 'MQTT_QOS')
-mqtt_port = $(bashio::config 'MQTT_PORT')
-mqtt_username = $(bashio::config 'MQTT_USERNAME')
-mqtt_password = $(bashio::config 'MQTT_PASSWORD')
+mqtt_host = os.getenv(bashio::config 'MQTT_HOST')
+mqtt_qos = int(os.getenv(bashio::config 'MQTT_QOS') or 0)
+mqtt_port = int(os.getenv(bashio::config 'MQTT_PORT') or 1883)
+mqtt_username = os.getenv(bashio::config 'MQTT_USERNAME')
+mqtt_password = os.getenv(bashio::config 'MQTT_PASSWORD')
 
-home_assistant = $(bashio::config 'HOME_ASSISTANT')
-home_assistant_prefix = $(bashio::config 'HOME_ASSISTANT_PREFIX')
+home_assistant = os.getenv(bashio::config 'HOME_ASSISTANT')
+home_assistant_prefix = os.getenv(bashio::config 'HOME_ASSISTANT_PREFIX')
 
 
 def log(msg, level="INFO"):
