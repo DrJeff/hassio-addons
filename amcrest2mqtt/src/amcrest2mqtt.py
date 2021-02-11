@@ -7,7 +7,7 @@ import sys
 import json
 import signal
 
-#CONFIG_PATH=/data/options.json
+CONFIG_PATH=/data/options.json
 
 # amcrest_host = os.getenv("AMCREST_HOST")
 # amcrest_port = int(os.getenv("AMCREST_PORT") or 80)
@@ -23,7 +23,7 @@ import signal
 # home_assistant = os.getenv("HOME_ASSISTANT") == "true"
 # home_assistant_prefix = os.getenv("HOME_ASSISTANT_PREFIX") or "homeassistant"
 
-amcrest_host = os.getenv(bashio::config 'AMCREST_HOST') 
+amcrest_host="$(bashio::config 'AMCREST_HOST') 
 amcrest_port = int(os.getenv(bashio::config 'AMCREST_PORT') or 80)
 amcrest_username = os.getenv(bashio::config 'AMCREST_USERNAME')
 amcrest_password = os.getenv(bashio::config 'AMCREST_PASSWORD')
