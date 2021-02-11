@@ -23,19 +23,19 @@ import signal
 # home_assistant = os.getenv("HOME_ASSISTANT") == "true"
 # home_assistant_prefix = os.getenv("HOME_ASSISTANT_PREFIX") or "homeassistant"
 
-amcrest_host = $(bashio::config 'AMCREST_HOST') 
-amcrest_port = $(bashio::config 'AMCREST_PORT')
-amcrest_username = $(bashio::config 'AMCREST_USERNAME')
-amcrest_password = $(bashio::config 'AMCREST_PASSWORD')
+amcrest_host = bashio::config 'AMCREST_HOST' 
+amcrest_port = bashio::config 'AMCREST_PORT'
+amcrest_username = bashio::config 'AMCREST_USERNAME'
+amcrest_password = bashio::config 'AMCREST_PASSWORD'
 
-mqtt_host = $(bashio::config 'MQTT_HOST')
-mqtt_qos = $(bashio::config 'MQTT_QOS')
-mqtt_port = $(bashio::config 'MQTT_PORT')
-mqtt_username = $(bashio::config 'MQTT_USERNAME')
-mqtt_password = $(bashio::config 'MQTT_PASSWORD')
+mqtt_host = bashio::config 'MQTT_HOST'
+mqtt_qos = bashio::config 'MQTT_QOS'
+mqtt_port = bashio::config 'MQTT_PORT'
+mqtt_username = bashio::config 'MQTT_USERNAME'
+mqtt_password = bashio::config 'MQTT_PASSWORD'
 
-home_assistant = $(bashio::config 'HOME_ASSISTANT')
-home_assistant_prefix = $(bashio::config 'HOME_ASSISTANT_PREFIX')
+home_assistant = bashio::config 'HOME_ASSISTANT'
+home_assistant_prefix = bashio::config 'HOME_ASSISTANT_PREFIX'
 
 
 def log(msg, level="INFO"):
@@ -44,7 +44,7 @@ def log(msg, level="INFO"):
 
 # Exit if any of the required vars are not provided
 if amcrest_host is None:
-    log("Please set the AMCREST_HOST environment variable", level="ERROR")
+    log("Please set the AMCREST_HOST environment variable, not SET!", level="ERROR")
     sys.exit(1)
 
 if amcrest_password is None:
