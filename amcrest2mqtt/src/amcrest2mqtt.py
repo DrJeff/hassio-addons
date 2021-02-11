@@ -7,7 +7,7 @@ import sys
 import json
 import signal
 
-CONFIG_PATH=/data/options.json
+#CONFIG_PATH=/data/options.json
 
 # amcrest_host = os.getenv("AMCREST_HOST")
 # amcrest_port = int(os.getenv("AMCREST_PORT") or 80)
