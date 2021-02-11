@@ -1,9 +1,9 @@
-# FROM python:3.9-alpine as base
-# FROM base as builder
-ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM python:3.9-alpine as base
+FROM base as builder
+# ARG BUILD_FROM
+# FROM $BUILD_FROM
 
-ENV LANG C.UTF-8
+# ENV LANG C.UTF-8
 
 RUN mkdir /install
 WORKDIR /install
